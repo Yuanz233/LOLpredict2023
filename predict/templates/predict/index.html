@@ -1,0 +1,260 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LOL胜负预测</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="team">
+            <div class="team-title">队伍 A</div>
+            <div class="team-members">
+                <div class="member">
+                    <div class="member-info">
+
+                        <div class="member-row">
+                            <div class="member-name">
+                                <img id="bluetopplayer" class="member-img" src="{% static 'hero1.jpg' %}" alt="blue top player">
+                                <p id="bluetopplayer" class="member-text">blue top</p>
+                            </div>
+                            <div class="member-hero">
+                                <img id="bluetopchampion" class="member-img" src="{% static 'hero1.jpg' %}" alt="blue top champion">
+                                <p id="bluetopchampion" class="member-text">blue top</p>
+                            </div>
+                        </div>
+
+                        <div class="member-row">
+                            <div class="member-name">
+                                <img id="bluejugplayer" class="member-img" src="{% static 'hero1.jpg' %}" alt="blue jug player">
+                                <p id="bluejugplayer" class="member-text">blue jug</p>
+                            </div>
+                            <div class="member-hero">
+                                <img id="bluejugchampion" class="member-img" src="{% static 'hero1.jpg' %}" alt="blue jug champion">
+                                <p id="bluejugchampion" class="member-text">blue jug</p>
+                            </div>
+                        </div>
+
+                        <div class="member-row">
+                            <div class="member-name">
+                                <img id="bluemidplayer" class="member-img" src="{% static 'hero1.jpg' %}" alt="blue mid player">
+                                <p id="bluemidplayer" class="member-text">blue mid</p>
+                            </div>
+                            <div class="member-hero">
+                                <img id="bluemidchampion" class="member-img" src="{% static 'hero1.jpg' %}" alt="blue mid champion">
+                                <p id="bluemidchampion" class="member-text">blue mid</p>
+                            </div>
+                        </div>
+
+                        <div class="member-row">
+                            <div class="member-name">
+                                <img id="blueadplayer" class="member-img" src="{% static 'hero1.jpg' %}" alt="blue ad player">
+                                <p id="blueadplayer" class="member-text">blue ad</p>
+                            </div>
+                            <div class="member-hero">
+                                <img id="blueadchampion" class="member-img" src="{% static 'hero1.jpg' %}" alt="blue ad champion">
+                                <p id="blueadchampion" class="member-text">blue ad</p>
+                            </div>
+                        </div>
+
+                        <div class="member-row">
+                            <div class="member-name">
+                                <img id="bluesupplayer" class="member-img" src="{% static 'hero1.jpg' %}" alt="blue sup player">
+                                <p id="bluesupplayer" class="member-text">blue sup</p>
+                            </div>
+                            <div class="member-hero">
+                                <img id="bluesupchampion" class="member-img" src="{% static 'hero1.jpg' %}" alt="blue sup champion">
+                                <p id="bluesupchampion" class="member-text">blue sup</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="team">
+            <div class="team-title">队伍 B</div>
+            <div class="team-members">
+                <div class="member">
+                    <div class="member-info">
+                        
+                        <div class="member-row">
+                            <div class="member-name">
+                                <img id="redtopplayer" class="member-img" src="{% static 'hero1.jpg' %}" alt="red top player">
+                                <p id="redtopplayer" class="member-text">red top</p>
+                            </div>
+                            <div class="member-hero">
+                                <img id="redtopchampion" class="member-img" src="{% static 'hero1.jpg' %}" alt="red top champion">
+                                <p id="redtopchampion" class="member-text">red top</p>
+                            </div>
+                        </div>
+
+                        <div class="member-row">
+                            <div class="member-name">
+                                <img id="redjugplayer" class="member-img" src="{% static 'hero1.jpg' %}" alt="red jug player">
+                                <p id="redjugplayer" class="member-text">red jug</p>
+                            </div>
+                            <div class="member-hero">
+                                <img id="redjugchampion" class="member-img" src="{% static 'hero1.jpg' %}" alt="red jug champion">
+                                <p id="redjugchampion" class="member-text">red jug</p>
+                            </div>
+                        </div>
+
+                        <div class="member-row">
+                            <div class="member-name">
+                                <img id="redmidplayer" class="member-img" src="{% static 'hero1.jpg' %}" alt="red mid player">
+                                <p id="redmidplayer" class="member-text">red mid</p>
+                            </div>
+                            <div class="member-hero">
+                                <img id="redmidchampion" class="member-img" src="{% static 'hero1.jpg' %}" alt="red mid champion">
+                                <p id="redmidchampion" class="member-text">red mid</p>
+                            </div>
+                        </div>
+
+                        <div class="member-row">
+                            <div class="member-name">
+                                <img id="redadplayer" class="member-img" src="{% static 'hero1.jpg' %}" alt="red ad player">
+                                <p id="redadplayer" class="member-text">red ad</p>
+                            </div>
+                            <div class="member-hero">
+                                <img id="redadchampion" class="member-img" src="{% static 'hero1.jpg' %}" alt="red ad champion">
+                                <p id="redadchampion" class="member-text">red ad</p>
+                            </div>
+                        </div>
+
+                        <div class="member-row">
+                            <div class="member-name">
+                                <img id="redsupplayer" class="member-img" src="{% static 'hero1.jpg' %}" alt="red sup player">
+                                <p id="redsupplayer" class="member-text">red sup</p>
+                            </div>
+                            <div class="member-hero">
+                                <img id="redsupchampion" class="member-img" src="{% static 'hero1.jpg' %}" alt="red sup champion">
+                                <p id="redsupchampion" class="member-text">red sup</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 添加其他队伍选项卡 -->
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <ul id="team-list" class="tabs">
+                    <!--js处理-->
+                </ul>
+                <div class="team-members">
+                    <div class="team-member" data-team="0">
+
+                        <div class="member-row">
+                            <div class="member-name">
+                                <img id="topplayer" class="member-img" src="{% static 'hero1.jpg' %}" alt="top player">
+                                <p id="topplayer" class="member-text">top</p>
+                            </div>
+                            <div class="member-name">
+                                <img id="jugplayer" class="member-img" src="{% static 'hero1.jpg' %}" alt="jug player">
+                                <p id="jugplayer" class="member-text">jug</p>
+                            </div>
+                            <div class="member-name">
+                                <img id="midplayer" class="member-img" src="{% static 'hero1.jpg' %}" alt="mid player">
+                                <p id="midplayer" class="member-text">mid</p>
+                            </div>
+                            <div class="member-name">
+                                <img id="adplayer" class="member-img" src="{% static 'hero1.jpg' %}" alt="ad player">
+                                <p id="adplayer" class="member-text">ad</p>
+                            </div>
+                            <div class="member-name">
+                                <img id="supplayer" class="member-img" src="{% static 'hero1.jpg' %}" alt="sup player">
+                                <p id="supplayer" class="member-text">sup</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="team-member" data-team="B">
+                        <!-- 队伍 B 的队员列表 -->
+                    </div>
+                    <!-- 添加其他队伍的队员列表 -->
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
+
+
+<script>
+
+    // 异步加载JSON数据
+    fetch("{% static 'json/team.json' %}")
+        .then(response => response.json())
+        .then(data => {
+            const list = document.getElementById('team-list');
+
+            // 遍历JSON数据并生成<li>标签
+            console.log(data)
+            data.items.forEach((item,index) => {
+                const li = document.createElement('li');
+                li.classList.add("tab")
+                li.setAttribute("data-team",String(index))
+                const img = document.createElement('img');
+                img.classList.add("member-img")
+                img.src = item.pic;
+                img.alt = item.name;
+                const p = document.createElement('p');
+                p.classList.add("member-text")
+                p.textContent = item.name;
+                const divc = document.createElement("div");
+                divc.classList.add("member-name");
+                // 将<img>和<p>添加到<li>标签
+                divc.appendChild(img);
+                divc.appendChild(p);
+                li.appendChild(divc);
+
+                // 将<li>标签添加到<ul>中
+                list.appendChild(li);
+            });
+        })
+        .catch(error => console.error('Error:', error));
+
+
+    document.addEventListener("DOMContentLoaded", function() {
+    const popup = document.getElementById("popup");
+    const tabs = document.querySelectorAll(".tab");
+    const teamMembers = document.querySelectorAll(".team-member");
+
+    // 点击图片时显示弹出组件
+    const images = document.querySelectorAll(".member-img");
+    images.forEach(image => {
+        image.addEventListener("click", function() {
+            popup.style.display = "block";
+        });
+    });
+
+    // 点击选项卡时切换队员列表
+    tabs.forEach(tab => {
+        tab.addEventListener("click", function() {
+            const team = tab.getAttribute("data-team");
+            tabs.forEach(t => t.classList.remove("active"));
+            tab.classList.add("active");
+            teamMembers.forEach(member => {
+                member.style.display = "none";
+                if (member.getAttribute("data-team") === team) {
+                    member.style.display = "block";
+                }
+            });
+        });
+    });
+
+    // 关闭弹出组件
+    const closeButton = document.querySelector(".close-button");
+    closeButton.addEventListener("click", function() {
+        popup.style.display = "none";
+    });
+});
+</script>

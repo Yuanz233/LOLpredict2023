@@ -1,0 +1,177 @@
+@media (max-width: 767px) {
+    .team {
+        flex-basis: 100%;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 100%;
+    padding: 20px;
+    padding-bottom: 0px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.team {
+    flex-basis: 48%;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    padding: 0px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.team-title {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.team-members {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.member {
+    flex-basis: 80%;
+    padding: 10px;
+    background-color: #f9f9f9;
+    margin: auto;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    font-size: 10px;
+}
+
+.member-row {
+    flex-basis: 80%;
+    margin: auto;
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.member-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.member-info {
+    flex-grow: 1;
+}
+
+.member-name {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 40%;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    align-items: center;
+}
+
+.member-text {
+    margin: 0px;
+    align-items: center;
+}
+
+.member-hero {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 40%;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-bottom: 5px;
+    align-items: center;
+}
+
+.hero-img {
+    width: 20px;
+    height: 20px;
+}
+
+.popup {
+    display: none;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    background-color: #f9f9f9;
+    max-width: 90%;
+    padding: 5px;
+    box-sizing: border-box;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* 设置弹出组件的内容样式 */
+.popup-content {
+    display: flex;
+    max-width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column
+}
+
+/* 设置选项卡的样式 */
+.tabs {
+    /* list-style: none; */
+    font-size: 15px;
+    /*column-count: 2;  指定两列 */
+    column-gap: 10px; /* 可选，设置列之间的间隔 */
+    margin-right: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.tab {
+    display: block;
+}
+
+/* 设置队员列表的样式 */
+.team-member {
+    display: none;
+    font-size: 10px;
+}
+
+/* 设置选项卡选中时的样式 */
+.tab.active {
+    display: block;
+}
+
+.champion-select {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.predict-btn {
+    align-items: center;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.result {
+    align-self: center;
+}
+
+.result-container {
+    max-width: 100%;
+    padding: 20px;
+    padding-top: 0px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}

@@ -1,0 +1,258 @@
+﻿{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+
+    <meta http-equiv="Pragma" content="no-cache" />
+
+    <meta http-equiv="Expires" content="0" />
+    
+<meta http-equiv="Cache" content="no-cache" />
+
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style_champions.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LOL阵容胜负预测</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="team">
+            <div class="team-title">蓝色方</div>
+            <div class="team-members">
+                <div class="member">
+                    <div class="member-info">
+                        <div class="member-hero">
+                            <img id="btopimg" class="member-img" src="{% static 'hero1.jpg' %}" alt="blue top champion">
+                            <p id="btopp" class="member-text">blue top</p>
+                        </div>
+                        <div class="member-hero">
+                            <img id="bjugimg" class="member-img" src="{% static 'hero1.jpg' %}" alt="blue jug champion">
+                            <p id="bjugp" class="member-text">blue jug</p>
+                        </div>
+                        <div class="member-hero">
+                            <img id="bmidimg" class="member-img" src="{% static 'hero1.jpg' %}" alt="blue mid champion">
+                            <p id="bmidp" class="member-text">blue mid</p>
+                        </div>
+                        <div class="member-hero">
+                            <img id="badimg" class="member-img" src="{% static 'hero1.jpg' %}" alt="blue ad champion">
+                            <p id="badp" class="member-text">blue ad</p>
+                        </div>
+                        <div class="member-hero">
+                            <img id="bsupimg" class="member-img" src="{% static 'hero1.jpg' %}" alt="blue sup champion">
+                            <p id="bsupp" class="member-text">blue sup</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="team">
+            <div class="team-title">红色方</div>
+            <div class="team-members">
+                <div class="member">
+                    <div class="member-info">
+                        <div class="member-hero">
+                            <img id="rtopimg" class="member-img" src="{% static 'hero1.jpg' %}" alt="red top champion">
+                            <p id="rtopp" class="member-text">red top</p>
+                        </div>
+                        <div class="member-hero">
+                            <img id="rjugimg" class="member-img" src="{% static 'hero1.jpg' %}" alt="red jug champion">
+                            <p id="rjugp" class="member-text">red jug</p>
+                        </div>
+                        <div class="member-hero">
+                            <img id="rmidimg" class="member-img" src="{% static 'hero1.jpg' %}" alt="red mid champion">
+                            <p id="rmidp" class="member-text">red mid</p>
+                        </div>
+                        <div class="member-hero">
+                            <img id="radimg" class="member-img" src="{% static 'hero1.jpg' %}" alt="red ad champion">
+                            <p id="radp" class="member-text">red ad</p>
+                        </div>
+                        <div class="member-hero">
+                            <img id="rsupimg" class="member-img" src="{% static 'hero1.jpg' %}" alt="red sup champion">
+                            <p id="rsupp" class="member-text">red sup</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 添加其他队伍选项卡 -->
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <ul id="team-list" class="tabs">
+                    <li class="tab" position="top">
+                        上路
+                    </li>
+                    <li class="tab" position="jug">
+                        打野
+                    </li>
+                    <li class="tab" position="mid">
+                        中路
+                    </li>
+                    <li class="tab" position="ad">
+                        下路
+                    </li>
+                    <li class="tab" position="sup">
+                        辅助
+                    </li>
+                </ul>
+                <div class="champion-select">
+                    <!-- js处理 -->
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="result-container">
+        <!-- button -->
+        {% csrf_token %}
+        <button class="predict-btn" id="senddata">进行预测</button>
+        <p class="result" id="result"></p>
+    </div>
+
+</body>
+</html>
+
+
+<script>
+
+    // 异步加载JSON数据
+    // fetch("{% static 'json/team.json' %}")
+    //     .then(response => response.json())
+    //     .then(data => {
+    //         const list = document.getElementById('team-list');
+
+    //         // 遍历JSON数据并生成<li>标签
+    //         console.log(data)
+    //         data.items.forEach((item,index) => {
+    //             const li = document.createElement('li');
+    //             li.classList.add("tab")
+    //             li.setAttribute("data-team",String(index))
+    //             const img = document.createElement('img');
+    //             img.classList.add("member-img")
+    //             img.src = item.pic;
+    //             img.alt = item.name;
+    //             const p = document.createElement('p');
+    //             p.classList.add("member-text")
+    //             p.textContent = item.name;
+    //             const divc = document.createElement("div");
+    //             divc.classList.add("member-name");
+    //             // 将<img>和<p>添加到<li>标签
+    //             divc.appendChild(img);
+    //             divc.appendChild(p);
+    //             li.appendChild(divc);
+
+    //             // 将<li>标签添加到<ul>中
+    //             list.appendChild(li);
+    //         });
+    //     })
+    //     .catch(error => console.error('Error:', error));
+
+
+document.addEventListener("DOMContentLoaded", function() {
+const popup = document.getElementById("popup");
+const tabs = document.querySelectorAll(".tab");
+const champions = document.querySelectorAll(".champion-select")[0];
+var fill_imgid,fill_pid;
+
+    // 点击图片时显示弹出组件
+    const images = document.querySelectorAll(".member-img");
+    images.forEach(image => {
+        image.addEventListener("click", function() {
+            popup.style.display = "block";
+            fill_imgid = image.id
+            fill_pid = fill_imgid.slice(0,-3)+"p"
+        });
+    });
+
+    // 点击选项卡时出现对应位置英雄
+    tabs.forEach(tab => {
+        tab.addEventListener("click", function() {
+            const position = tab.getAttribute("position");
+            tabs.forEach(t => t.classList.remove("active"));
+            tab.classList.add("active");
+            while (champions.firstChild) {
+                champions.removeChild(champions.firstChild);
+            }
+            // json读取
+            fetch("{% static 'json/champions_html.json' %}")
+                .then(response => response.json())
+                .then(data => {
+                // console.log(position)
+                // console.log(data[position])
+                data[position].forEach((item,index) => {
+                    // 将<img>和<p>添加
+                    const img = document.createElement('img');
+                    img.classList.add("member-img")
+                    img.setAttribute("index",String(index))
+                    img.src = "{% static '' %}" + item.pic
+                    // console.log(img.src)
+                    img.alt = item.name;
+                    // 添加点击事件
+                    img.addEventListener("click", function() {
+                        fill_img = document.getElementById(fill_imgid)
+                        fill_p = document.getElementById(fill_pid)
+                        fill_img.src = img.src
+                        fill_p.textContent = img.alt
+                        popup.style.display = "none";
+                    })
+
+                    const p = document.createElement('p');
+                    p.classList.add("member-text")
+                    p.textContent = item.name;
+                    const divc = document.createElement("div");
+                    divc.classList.add("member-name");
+                    divc.appendChild(img);
+                    divc.appendChild(p);
+                    champions.appendChild(divc);
+                })
+
+            });
+        });
+    });
+
+var csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+
+document.getElementById("senddata").addEventListener("click", function() {
+    
+    //console.log(csrftoken)
+    var data_send = [document.getElementById("btopp").textContent,
+                    document.getElementById("bjugp").textContent,
+                    document.getElementById("bmidp").textContent,
+                    document.getElementById("badp").textContent,
+                    document.getElementById("bsupp").textContent,
+                    document.getElementById("rtopp").textContent,
+                    document.getElementById("rjugp").textContent,
+                    document.getElementById("rmidp").textContent,
+                    document.getElementById("radp").textContent,
+                    document.getElementById("rsupp").textContent];
+    
+    fetch("result/", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "X-CSRFToken": csrftoken  // 请确保在模板中设置csrftoken
+        },
+        body: JSON.stringify({ "imput": data_send }),
+    })
+    .then(response => response.json())
+    .then(data => {
+        // console.log(data)
+        document.getElementById("result").textContent = data.result;
+    })
+    .catch(error => {
+        console.error("Error:", error);
+    });
+});
+
+});
+
+
+
+</script>

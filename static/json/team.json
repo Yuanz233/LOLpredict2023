@@ -1,0 +1,28 @@
+{
+    "items":[
+        {"name":"LNG","pic":"{% static 'team-pics/hero1.jpg' %}","topname":"AAA","toppic":"{% static 'team-pics/hero1.jpg' %}","jugname":"AAA","jugpic":"{% static 'team-pics/hero1.jpg' %}",
+        "midname":"AAA","midpic":"{% static 'team-pics/hero1.jpg' %}","adname":"AAA","adpic":"{% static 'team-pics/hero1.jpg' %}",
+        "supname":"AAA","suppic":"{% static 'team-pics/hero1.jpg' %}"},
+        {"name":"LNG","pic":"/static/team-pics/hero1.jpg","topname":"AAA","toppic":"{% static 'team-pics/hero1.jpg' %}","jugname":"AAA","jugpic":"{% static 'team-pics/hero1.jpg' %}",
+        "midname":"AAA","midpic":"{% static 'team-pics/hero1.jpg' %}","adname":"AAA","adpic":"{% static 'team-pics/hero1.jpg' %}",
+        "supname":"AAA","suppic":"{% static 'team-pics/hero1.jpg' %}"},
+        {"name":"LNG","pic":"/static/team-pics/hero1.jpg","topname":"AAA","toppic":"{% static 'team-pics/hero1.jpg' %}","jugname":"AAA","jugpic":"{% static 'team-pics/hero1.jpg' %}",
+        "midname":"AAA","midpic":"{% static 'team-pics/hero1.jpg' %}","adname":"AAA","adpic":"{% static 'team-pics/hero1.jpg' %}",
+        "supname":"AAA","suppic":"{% static 'team-pics/hero1.jpg' %}"},
+        {"name":"LNG","pic":"/static/team-pics/hero1.jpg","topname":"AAA","toppic":"{% static 'team-pics/hero1.jpg' %}","jugname":"AAA","jugpic":"{% static 'team-pics/hero1.jpg' %}",
+        "midname":"AAA","midpic":"{% static 'team-pics/hero1.jpg' %}","adname":"AAA","adpic":"{% static 'team-pics/hero1.jpg' %}",
+        "supname":"AAA","suppic":"{% static 'team-pics/hero1.jpg' %}"},
+        {"name":"LNG","pic":"/static/team-pics/hero1.jpg","topname":"AAA","toppic":"{% static 'team-pics/hero1.jpg' %}","jugname":"AAA","jugpic":"{% static 'team-pics/hero1.jpg' %}",
+        "midname":"AAA","midpic":"{% static 'team-pics/hero1.jpg' %}","adname":"AAA","adpic":"{% static 'team-pics/hero1.jpg' %}",
+        "supname":"AAA","suppic":"{% static 'team-pics/hero1.jpg' %}"},
+        {"name":"LNG","pic":"/static/team-pics/hero1.jpg","topname":"AAA","toppic":"{% static 'team-pics/hero1.jpg' %}","jugname":"AAA","jugpic":"{% static 'team-pics/hero1.jpg' %}",
+        "midname":"AAA","midpic":"{% static 'team-pics/hero1.jpg' %}","adname":"AAA","adpic":"{% static 'team-pics/hero1.jpg' %}",
+        "supname":"AAA","suppic":"{% static 'team-pics/hero1.jpg' %}"},
+        {"name":"LNG","pic":"/static/team-pics/hero1.jpg","topname":"AAA","toppic":"{% static 'team-pics/hero1.jpg' %}","jugname":"AAA","jugpic":"{% static 'team-pics/hero1.jpg' %}",
+        "midname":"AAA","midpic":"{% static 'team-pics/hero1.jpg' %}","adname":"AAA","adpic":"{% static 'team-pics/hero1.jpg' %}",
+        "supname":"AAA","suppic":"{% static 'team-pics/hero1.jpg' %}"},
+        {"name":"LNG","pic":"/static/team-pics/hero1.jpg","topname":"AAA","toppic":"{% static 'team-pics/hero1.jpg' %}","jugname":"AAA","jugpic":"{% static 'team-pics/hero1.jpg' %}",
+        "midname":"AAA","midpic":"{% static 'team-pics/hero1.jpg' %}","adname":"AAA","adpic":"{% static 'team-pics/hero1.jpg' %}",
+        "supname":"AAA","suppic":"{% static 'team-pics/hero1.jpg' %}"}
+    ]
+}
